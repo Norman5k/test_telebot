@@ -174,6 +174,7 @@ class HandlerAllText(Handler):
         # отправляем сообщение пользователю
         self.send_message_order(count[self.step], quantity, message)
 
+    # just for test
     def pressed_btn_next_step(self, message):
         """
         Обрабатывает входящие текстовые сообщения от нажатия на кнопку NEXT_STEP
