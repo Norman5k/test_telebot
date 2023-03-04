@@ -61,7 +61,7 @@ class DBManager(metaclass=Singleton):
         all_id_product = self.select_all_product_id(user_id)
         # если данные есть в списке, обновляем таблицы заказа и продуктов
         if product_id in all_id_product:
-            quantity_order = self.select_order_quantity(product_id)
+            quantity_order = self.select_order_quantity(product_id, user_id)
             self.update_order_value(product_id, user_id, 'quantity', quantity_order + 1)
 
             quantity_product = self.select_single_product_quantity(product_id)
